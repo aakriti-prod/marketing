@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aakrity Singh | Brand Strategist, Social &amp; Content Execution</title>
+<meta name="description" content="Portfolio of Aakrity Singh, brand strategist specializing in positioning, social media, and content execution for B2B SaaS brands.">
+<style>
+  :root{
+    --ink:#262b24; --body:#3c423b; --paper:#ffffff; --band:#edf2eb;
+    --accent:#4c7a52; --accent-dark:#385c3e; --rule:#262b24; --soft:#efede8;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--body); background:var(--paper); line-height:1.6; font-size:17px}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px}
+  /* header */
+  header.site{border-bottom:4px solid var(--rule); position:sticky; top:0; background:var(--paper); z-index:50}
+  .bar{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:16px}
+  .brand{font-weight:900; font-size:22px; letter-spacing:-.02em; text-decoration:none; color:var(--ink)}
+  .brand i{font-style:normal; color:var(--accent)}
+  nav.links{display:flex; gap:22px; align-items:center}
+  nav.links a{color:var(--body); text-decoration:none; font-size:15px; font-weight:600}
+  nav.links a:hover{color:var(--accent)}
+  .btn{display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
+    padding:12px 24px; font-size:15px; font-weight:800; letter-spacing:.01em; border:none}
+  .btn:hover{background:var(--accent-dark)}
+  .btn.ghost{background:transparent; color:var(--ink); outline:3px solid var(--ink); outline-offset:-3px}
+  .btn.ghost:hover{color:var(--accent); outline-color:var(--accent)}
+  /* hero */
+  .hero{padding:76px 0 64px; display:grid; grid-template-columns:1.65fr 1fr; gap:56px; align-items:start}
+  .hero .role{font-size:15px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent)}
+  .hero .location{font-size:14px; font-weight:600; color:var(--body); margin-top:6px}
+  .hero h1{font-size:60px; line-height:1.02; font-weight:900; letter-spacing:-.035em; color:var(--ink); margin:14px 0 20px}
+  .hero h1 em{font-family:Georgia,"Times New Roman",serif; font-style:italic; font-weight:700; color:var(--accent)}
+  .punch{font-size:21px; font-weight:700; color:var(--ink); margin-bottom:16px; max-width:34ch}
+  .lede{font-size:18px; max-width:56ch; margin-bottom:28px}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px}
+  .contact-line{font-size:15px}
+  .contact-line a{color:var(--accent); text-decoration:none; font-weight:600}
+  .facts{background:var(--band); padding:26px 26px 20px}
+  .facts h3{font-size:13px; text-transform:uppercase; letter-spacing:.14em; margin-bottom:14px; color:var(--ink)}
+  .facts dl{display:grid; gap:12px; font-size:15px}
+  .facts dt{font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:var(--body)}
+  .facts dd{font-weight:800; color:var(--ink)}
+  /* stats */
+  .stats{background:var(--accent); color:#fff}
+  .stats .wrap{display:grid; grid-template-columns:repeat(4,1fr)}
+  .stat{padding:30px 22px}
+  .stat + .stat{border-left:2px solid rgba(255,255,255,.4)}
+  .stat .n{font-size:44px; font-weight:900; letter-spacing:-.03em; line-height:1}
+  .stat .t{font-size:14px; margin-top:8px; color:#fff}
+  /* sections */
+  section.block{padding:68px 0; border-bottom:4px solid var(--rule)}
+  .sec-title{display:flex; align-items:baseline; gap:18px; margin-bottom:12px}
+  .sec-title .num{font-size:18px; font-weight:900; color:var(--accent)}
+  .sec-title h2{font-size:42px; font-weight:900; letter-spacing:-.03em; color:var(--ink)}
+  .sec-sub{font-size:18px; max-width:62ch; margin-bottom:36px}
+  /* about */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px}
+  .about-grid p{margin-bottom:16px; max-width:52ch}
+  .about-grid strong{color:var(--ink)}
+  .metrics{font-size:20px; font-weight:900; color:var(--accent); letter-spacing:-.01em; margin:6px 0 16px}
+  /* pillars */
+  .pillar{border-top:4px solid var(--rule); padding:26px 0; display:grid; grid-template-columns:120px 1fr; gap:24px}
+  .pillar:last-of-type{border-bottom:4px solid var(--rule)}
+  .pillar .pnum{font-size:44px; font-weight:900; color:var(--accent); letter-spacing:-.03em; line-height:1}
+  .pillar h3{font-size:24px; font-weight:900; color:var(--ink); letter-spacing:-.02em; margin-bottom:8px}
+  .pillar p{max-width:72ch}
+  .pillar p strong, .lede strong{color:var(--accent)}
+  .pillar .detail{font-size:15px; margin-top:10px}
+  .process{margin-top:28px; font-size:19px; font-weight:800; color:var(--ink)}
+  .process span{color:var(--accent)}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+  .chips span{background:transparent; border:2px solid var(--ink); color:var(--ink); border-radius:999px; padding:4px 13px; font-size:13.5px; font-weight:600}
+  .certs{margin-top:18px; font-size:15px}
+  .certs strong{color:var(--ink)}
+  /* cases */
+  .case{border-top:4px solid var(--rule); padding:34px 0 40px}
+  .case:last-child{border-bottom:none}
+  .case-head{display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; margin-bottom:6px}
+  .case-head .cnum{font-size:20px; font-weight:900; color:var(--accent)}
+  .case-head h3{font-size:28px; font-weight:900; color:var(--ink); letter-spacing:-.02em}
+  .case-head .tag{font-size:15px; font-weight:600}
+  .problem{font-size:18px; margin:10px 0 22px; max-width:70ch}
+  .problem strong, .how strong{color:var(--ink)}
+  .blist{margin:2px 0 14px 20px; font-size:15.5px}
+  .blist li{margin-bottom:5px; max-width:76ch}
+  .how{font-size:16.5px; max-width:74ch; margin-bottom:10px}
+  .steps{margin:2px 0 14px 22px; font-size:16.5px}
+  .steps li{margin-bottom:6px; max-width:74ch}
+  .impact{font-size:19px; font-weight:800; color:var(--ink); margin:12px 0 14px}
+  .impact strong{color:var(--accent)}
+  .skills{display:flex; flex-wrap:wrap; gap:8px}
+  .skills span{border:2px solid var(--ink); padding:3px 12px; font-size:13.5px; font-weight:700; color:var(--ink)}
+  .case-index{font-size:16px; font-weight:700; margin-bottom:28px}
+  .case-index a{color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:3px}
+  .case-index a:hover{color:var(--accent)}
+  .subhead{font-size:15px; font-weight:900; text-transform:uppercase; letter-spacing:.12em; color:var(--ink); margin:26px 0 4px}
+  .sub{border-top:2px solid var(--soft); padding:14px 0}
+  .sub h4{font-size:17px; font-weight:800; color:var(--ink); margin-bottom:4px}
+  .sub h4 span{font-weight:400; font-size:14.5px}
+  .sub p{font-size:15.5px; max-width:78ch}
+  .sub p strong{color:var(--accent)}
+  /* contact */
+  .contact-box{background:var(--ink); color:#fff; padding:52px 48px; display:grid;
+    grid-template-columns:1.3fr 1fr; gap:36px; align-items:center}
+  .contact-box h2{font-size:38px; font-weight:900; letter-spacing:-.03em; margin-bottom:12px}
+  .contact-box p{color:#d8d2c7; margin-bottom:24px; max-width:44ch}
+  .contact-box .btn{background:var(--accent)}
+  .contact-list{list-style:none; display:grid; gap:12px; font-size:16px}
+  .contact-list a{color:#fff; font-weight:700}
+  footer.site{padding:26px 0 44px; font-size:14px; display:flex;
+    justify-content:space-between; flex-wrap:wrap; gap:10px}
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr; padding:52px 0 44px}
+    .hero h1{font-size:42px}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .stat:nth-child(3){border-left:none}
+    .stat:nth-child(n+3){border-top:2px solid rgba(255,255,255,.4)}
+    .about-grid{grid-template-columns:1fr}
+    .pillar{grid-template-columns:1fr; gap:8px}
+    .contact-box{grid-template-columns:1fr; padding:36px 28px}
+    nav.links a.hide-m{display:none}
+    .sec-title h2{font-size:32px}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Aakrity Singh<i>.</i></a>
+    <nav class="links">
+      <a class="hide-m" href="#about">About</a>
+      <a class="hide-m" href="#services">What I do</a>
+      <a class="hide-m" href="#experience">Experience</a>
+      <a class="hide-m" href="#cases">Cases</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <div class="role">Brand Strategist | Social &amp; Content Execution</div>
+      <div class="location">Bellevue, WA</div>
+      <h1>I build positioning, then <em>prove it in the feed.</em></h1>
+      <p class="punch">What I do is generic. How I work is what AI can&rsquo;t automate.</p>
+      <p class="lede">Human strategy. AI-accelerated. I position B2B tech and healthcare brands, then ship the Reels, landing pages, and nurtures behind them. <strong>Results:</strong> a $250K launch, +25% engagement, 4 portfolios.</p>
+      <div class="cta-row">
+        <a class="btn" href="Aakrity_Singh_Creative_Marketing_One_Pager.pdf" download>Download r&eacute;sum&eacute; (PDF)</a>
+        <a class="btn ghost" href="mailto:reach2writer@gmail.com">Email me</a>
+      </div>
+      <p class="contact-line">+1 (206) 979-4410 &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/aakriti-pm/">linkedin.com/in/aakriti-pm</a></p>
+    </div>
+    <aside class="facts">
+      <h3>At a glance</h3>
+      <dl>
+        <div><dt>Experience</dt><dd>8+ yrs marketing, content &amp; product</dd></div>
+        <div><dt>Focus</dt><dd>Brand positioning, Storytelling, Content strategy, Customer engagement, Audience segmentation</dd></div>
+        <div><dt>Results</dt><dd>6+ launches · +40% output</dd></div>
+        <div><dt>Education</dt><dd>MS, Information Management, UW</dd></div>
+        <div><dt>Base</dt><dd>Bellevue, WA · open to roles</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="n">+40%</div><div class="t">content output via AI pipeline</div></div>
+    <div class="stat"><div class="n">+15%</div><div class="t">MQL capture &amp; MRR growth</div></div>
+    <div class="stat"><div class="n">−20%</div><div class="t">churn across client portfolios</div></div>
+    <div class="stat"><div class="n">6+</div><div class="t">launches across IoT, healthcare &amp; e-commerce</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="block" id="about">
+    <div class="sec-title"><span class="num">01</span><h2>About</h2></div>
+    <p class="sec-sub">I write for humans, not algorithms.</p>
+    <div class="about-grid">
+      <div>
+        <p><strong>I&rsquo;m a Brand Strategist,</strong> and I have been around content for over 8 years. What started as passion turned into my profession, then grew into brand positioning and marketing. I use storytelling to improve customer experience.</p>
+        <p>I thrive on client feedback, and I handle trade-offs and enhancements whenever needed.</p>
+      </div>
+      <div>
+        <p>My clients span B2B, SaaS, and small boutique brands, all with different budgets and timelines. I work on features, enhancements, and user experiences that drive engagement and growth.</p>
+        <p><strong>My toolkit is generic. My strategy is unique.</strong></p>
+        <p class="metrics">+25% engagement · +15% MQLs · $250K launch · +40% output at 60% lower cost</p>
+        <p>MS Information Management, University of Washington. BE Computer Science.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="sec-title"><span class="num">02</span><h2>What I do</h2></div>
+    <p class="sec-sub">Brand sets the direction. Content carries it. Marketing makes it grow. I do all three.</p>
+    <div class="pillar">
+      <div class="pnum">01</div>
+      <div><h3>Branding</h3>
+      <p>I decide what a brand stands for: positioning, personas, messaging, voice. <strong>Results:</strong> B2B reframe, 3 clinic stories, trust-first safety messaging.</p>
+      <p class="detail"><strong>Skills:</strong> positioning, personas, messaging, voice, audience segmentation, competitive analysis.<br><strong>Toolkit:</strong> Figma, Canva, SEMrush, GA4, SQL.</p></div>
+    </div>
+    <div class="pillar">
+      <div class="pnum">02</div>
+      <div><h3>Content</h3>
+      <p>I build the system, then ship the content: calendars, AI pipelines, pages, guides, video. <strong>Results:</strong> 7 assets per brief, 60+ guides, 200-article KB.</p>
+      <p class="detail"><strong>Skills:</strong> content strategy, calendars, copywriting, storytelling, lifecycle management, AI refinement, SEO copy.<br><strong>Toolkit:</strong> ChatGPT, Claude, Perplexity, Midjourney, Canva AI, CapCut, Mailchimp, HubSpot, WordPress.</p></div>
+    </div>
+    <div class="pillar">
+      <div class="pnum">03</div>
+      <div><h3>Marketing</h3>
+      <p>I take products to market and grow them: GTM, launches, MQL pipeline. <strong>Results:</strong> $250K launch, +25% engagement, +15% MRR.</p>
+      <p class="detail"><strong>Skills:</strong> GTM, demand gen, MQL-to-SQL, funnel optimization, campaigns, A/B testing, retention, community.<br><strong>Toolkit:</strong> HubSpot, GA4, SEMrush, Tableau, Power BI, SQL, Mailchimp.</p></div>
+    </div>
+    <p class="process">Process: Research <span>&gt;</span> Position <span>&gt;</span> Create <span>&gt;</span> Post <span>&gt;</span> Analyze</p>
+    <div class="chips"><span>Brand positioning</span><span>Content strategy</span><span>GTM strategy</span><span>Customer engagement</span><span>Lead generation</span><span>Funnel optimization</span><span>Campaigns</span><span>Audience segmentation</span><span>Community</span><span>Keyword research</span><span>Personas</span><span>Messaging</span><span>Reels</span><span>CapCut</span><span>Canva</span><span>Copywriting</span><span>Calendars</span><span>Mailchimp</span><span>HubSpot</span><span>SEMrush</span><span>GA4 &amp; Analytics</span><span>Figma</span><span>WordPress</span><span>Squarespace</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>Competitive Analysis</span><span>Journey Mapping</span><span>Sales Enablement</span><span>Perplexity</span><span>Midjourney</span><span>Agentic AI Workflows</span><span>AI Content Pipelines</span><span>AI Video Editing</span><span>AI Image Generation</span><span>Demand Generation</span><span>SEO</span><span>Marketing Automation</span><span>A/B Testing</span><span>Content Lifecycle</span><span>Data-Driven Storytelling</span></div>
+    <p class="certs"><strong>Certifications:</strong> HubSpot Inbound + Content Marketing · Google Analytics (GA4) · Google Ads Search · Generative AI for Marketing</p>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="sec-title"><span class="num">03</span><h2>Industry Experience</h2></div>
+    <p class="sec-sub">Real-time case studies with real clients, delivered inside the UW program. Seattle, USA · 2024 – 2026.</p>
+    <p class="subhead">Projects</p>
+    <div class="sub">
+      <h4>Hugging Face <span>· Growth &amp; Engagement, Marketing + Content</span></h4>
+      <p>Redesigned developer onboarding in Figma. A/B-tested messaging, layout, and CTAs. Chose the segments and messages that fixed top-of-funnel conversion. <strong>→ +10% signups, +25% engagement.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Auvra <span>· Onboarding &amp; Retention, Content + Branding</span></h4>
+      <p>Synthesized patient feedback into high-fidelity Figma wireframes, reading what patients meant, not just what they clicked. Built an empathy-led onboarding roadmap. <strong>→ +25% retention.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Deloitte <span>· Content Strategy &amp; Analytics, Content + Marketing</span></h4>
+      <p>Built an executive dashboard from chatbot sentiment data, visualized in heat maps. Turned sentiment patterns into the content strategy for a workforce engagement tool. <strong>→ 17% faster feedback loop.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Green-AI <span>· GTM &amp; Brand Strategy, Branding + Marketing</span></h4>
+      <p>Created the GTM content strategy for a sustainable-AI initiative. Distilled cloud-optimization metrics into a product narrative, leading with numbers over slogans. Managed the full content lifecycle. <strong>→ Clear GTM story for green AI.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Ongoing <span>· Google &amp; Kaggle</span></h4>
+      <p>Using GA4 to spot consumer trends and shape brand positioning.</p>
+    </div>
+    <p class="how" style="margin-top:14px"><strong>Human edge:</strong> AI ran the numbers. I chose the segments, read the people behind the data, and set the strategy.</p>
+    <div class="skills" style="margin-top:16px"><span>Figma</span><span>A/B testing</span><span>Messaging</span><span>Segmentation</span><span>Content strategy</span><span>Analytics</span><span>GTM</span><span>Demand Generation</span></div>
+  </section>
+
+  <section class="block" id="cases">
+    <div class="sec-title"><span class="num">04</span><h2>Client Cases</h2></div>
+    <p class="sec-sub">Five engagements across tech, healthcare, and community.</p>
+    <p class="case-index"><a href="#case-ssd">01 SSD</a> · <a href="#case-hpe">02 HPE</a> · <a href="#case-tcs">03 TCS</a> · <a href="#case-gocoding">04 Go Coding</a> · <a href="#case-radiant">05 Radiant</a></p>
+
+    <article class="case" id="case-ssd">
+      <div class="case-head"><span class="cnum">01</span><h3>Seattle Software Developers</h3><span class="tag">GTM &amp; Content Strategist · Seattle, USA · Feb 2023 – Jun 2024</span></div>
+      <p class="how"><strong>Showcase:</strong> Custom software studio running 4 US client portfolios with no shared marketing.</p>
+      <p class="problem"><strong>Problem:</strong> Each account marketed on its own. Pages didn't convert, and content demand beat supply.</p>
+      <p class="how"><strong>Why I was onboarded:</strong> Founders needed one person to own GTM and content across all 4 portfolios.</p>
+      <p class="subhead">What I did</p>
+      <ul class="blist">
+        <li>Created GTM for a pricing engine: value prop, personas, segmentation, messaging.</li>
+        <li>Ran content roadmaps across 4 portfolios on SEMrush and GA4 data.</li>
+        <li>Grew MQL capture 15% with funnels, 12+ optimized pages, and sales battle cards.</li>
+        <li>Built an AI pipeline (ChatGPT, Claude, Canva AI, CapCut): 7 assets per brief.</li>
+        <li>Managed launch readiness for 3 releases: press, onboarding, tracked nurtures, decks.</li>
+      </ul>
+      <p class="how"><strong>How, in order:</strong></p>
+      <ol class="steps">
+        <li>Started with data: SQL and GA4 showed no shared plan, weak pages, and demand beating supply.</li>
+        <li>Set positioning first: who it is for, what it promises, how it sells.</li>
+        <li>Got founders, engineers, and clinicians to agree on the tough trade-offs.</li>
+        <li>Rebuilt the pages in Figma and WordPress, and set one shared calendar.</li>
+        <li>Launched 3 releases with tracked emails and sales backup.</li>
+        <li>Built an AI pipeline to hold the pace: 7 finished pieces per brief.</li>
+      </ol>
+      <p class="impact">Impact: <strong>+25% engagement, −20% churn, $250K first-cycle revenue, +15% MQLs, +40% output at 60% lower cost.</strong></p>
+      <p class="how"><strong>Human edge:</strong> AI drafted the assets. I made the positioning bets, settled stakeholder trade-offs, and owned the launches.</p>
+      <p class="subhead">Client work</p>
+      <div class="sub">
+        <h4>SafeLot, AutoTech SaaS <span>· Brand Strategy</span></h4>
+        <ul class="blist">
+          <li>Market entry reframing IoT tech as a dealership profit platform.</li>
+          <li>Messaging framework with persona variants for owners and fleet managers.</li>
+          <li>&ldquo;Safety &amp; Efficiency&rdquo; identity via press and trust content.</li>
+          <li>Designed acquisition pages in Figma; tightened funnels with fast deployment.</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <h4>Grace MindCare <span>· Strategy</span></h4>
+        <ul class="blist">
+          <li>Positioning and acquisition for 3 lines, each mapped to a patient persona.</li>
+          <li>Rewrote clinical copy into friendly language across all touchpoints.</li>
+          <li>60+ FAQs, guides, and press narratives with a 15-member care team.</li>
+        </ul>
+      </div>
+      <div class="sub">
+        <h4>Safety &amp; Women-Focused Initiatives <span>· Messaging</span></h4>
+        <ul class="blist">
+          <li>Trust-first, empathy-led messaging for vulnerable users.</li>
+          <li>Early positioning and content for safety platforms.</li>
+        </ul>
+      </div>
+      <div class="skills" style="margin-top:16px"><span>GTM strategy</span><span>Brand positioning</span><span>SEMrush</span><span>GA4</span><span>Figma</span><span>WordPress</span><span>Mailchimp</span><span>AI content ops</span><span>MQL-to-SQL</span><span>Demand Generation</span><span>AI Content Refinement</span></div>
+    </article>
+
+    <article class="case" id="case-hpe">
+      <div class="case-head"><span class="cnum">02</span><h3>HPE Aruba</h3><span class="tag">Product Content &amp; Enablement · Jan – Nov 2022</span></div>
+      <p class="how"><strong>Showcase:</strong> Enterprise networking giant. Aruba Central: SaaS platform, 10,000+ global users.</p>
+      <p class="problem"><strong>Problem:</strong> 10,000+ user SaaS platform with weak onboarding completion and high ticket volume; a new analytics feature needed launch content.</p>
+      <p class="how"><strong>Why I was onboarded:</strong> Aruba needed onboarding content strong enough to carry a platform relaunch.</p>
+      <p class="subhead">What I did</p>
+      <ul class="blist">
+        <li>Led an 8-person team relaunching onboarding with JTBD research.</li>
+        <li>Launched analytics content: positioning, in-app guides, battle cards.</li>
+        <li>Redesigned IA with chatbot docs and visual guides.</li>
+        <li>Lifted completion 17%; promoted in 6 months with GEM recognition.</li>
+      </ul>
+      <p class="how"><strong>How:</strong> Started from 800 monthly support tickets: mapped them to JTBD jobs, then rebuilt onboarding around jobs instead of features. Shipped alongside engineers, week by week.</p>
+      <p class="impact">Impact: <strong>+15% MRR, +17% completion, 20% less onboarding friction, $50K+ new MRR in 90 days, tickets down 23% (800 to 620 a month), +15% trial-to-paid.</strong></p>
+      <div class="skills"><span>JTBD</span><span>Onboarding design</span><span>Enablement content</span><span>Competitive positioning</span><span>SaaS growth</span></div>
+    </article>
+
+    <article class="case" id="case-tcs">
+      <div class="case-head"><span class="cnum">03</span><h3>TCS / SAP</h3><span class="tag">Product Analyst, Enterprise Content · 2017 – 2021</span></div>
+      <p class="how"><strong>Showcase:</strong> Global IT services. Enterprise SAP rollouts for worldwide accounts.</p>
+      <p class="problem"><strong>Problem:</strong> Slow enterprise onboarding, no standardized content, heavy support load across global SAP accounts.</p>
+      <p class="how"><strong>Why I was onboarded:</strong> SAP rollouts needed enablement content, and nobody owned it.</p>
+      <div class="bcm">
+        <div><h4>Branding</h4><p>One consistent voice across global teams via style guides.</p></div>
+        <div><h4>Content</h4><p>Chatbot + 200-article knowledge base; curricula, guides, playbooks; taxonomies and templates.</p></div>
+        <div><h4>Marketing</h4><p>Enablement programs lifting adoption across 5+ enterprise accounts.</p></div>
+      </div>
+      <p class="how"><strong>How:</strong> Inherited 5 accounts with no shared system. Built taxonomies, templates, and guides one account at a time, and trained juniors to keep the standard after I left.</p>
+      <p class="impact">Impact: <strong>−30% support volume, faster time-to-value, higher adoption, multiple GEM awards.</strong></p>
+      <div class="skills"><span>Content systems</span><span>Chatbot design</span><span>Knowledge management</span><span>Stakeholder communication</span></div>
+    </article>
+
+    <article class="case" id="case-gocoding">
+      <div class="case-head"><span class="cnum">04</span><h3>Go Coding</h3><span class="tag">Brand &amp; Community Marketing</span></div>
+      <p class="how"><strong>Showcase:</strong> Free, open-source coding platform fighting for student attention.</p>
+      <p class="problem"><strong>Problem:</strong> Hard to get busy young coders to notice a new website and use it. Zero budget for paid ads.</p>
+      <p class="how"><strong>Why I was onboarded:</strong> Zero ad budget, empty classrooms: they needed users without spending.</p>
+      <div class="bcm">
+        <div><h4>Branding</h4><p>Positioned the platform around its best trait: open-source and 100% free.</p></div>
+        <div><h4>Content</h4><p>Live, interactive coding bootcamps and workshops with hands-on demos.</p></div>
+        <div><h4>Marketing</h4><p>Zero-budget grassroots outreach in the community instead of online ads.</p></div>
+      </div>
+      <p class="how"><strong>How:</strong> Skipped ads entirely. Went to where students already gathered, ran live bootcamps, and let them try the platform on the spot.</p>
+      <p class="impact">Impact: <strong>Hundreds of students became active users on the spot; loyal community built purely through word-of-mouth.</strong></p>
+      <div class="skills"><span>Community marketing</span><span>Grassroots growth</span><span>Event hosting</span><span>Brand positioning</span><span>Developer relations</span></div>
+    </article>
+
+    <article class="case" id="case-radiant">
+      <div class="case-head"><span class="cnum">05</span><h3>Radiant Software</h3><span class="tag">Website Content &amp; Information Architect</span></div>
+      <p class="how"><strong>Showcase:</strong> Software services firm with a website nobody could navigate.</p>
+      <p class="problem"><strong>Problem:</strong> Potential clients couldn't find service information.</p>
+      <p class="how"><strong>Why I was onboarded:</strong> Leadership needed the site rebuilt so it could start selling services.</p>
+      <div class="bcm">
+        <div><h4>Branding</h4><p>Sharper brand positioning through a professional, confident voice across the site.</p></div>
+        <div><h4>Content</h4><p>Content strategy from scratch: rebuilt structure, services in clear categories, plain-language rewrite.</p></div>
+        <div><h4>Marketing</h4><p>Built for customer engagement: a smooth path guiding visitors to services.</p></div>
+      </div>
+      <p class="how"><strong>How:</strong> Audited the site as a first-time visitor and mapped every dead end. Then rebuilt the structure around the services clients actually ask about, in words they use.</p>
+      <p class="impact">Impact: <strong>A smoother visitor experience. A clear, modern hub for the company&rsquo;s services.</strong></p>
+      <div class="skills"><span>Brand positioning</span><span>Content strategy</span><span>Customer engagement</span><span>UX writing</span><span>Information architecture</span><span>Copywriting</span></div>
+    </article>
+  </section>
+
+  <section class="block" id="contact" style="border-bottom:none">
+    <div class="contact-box">
+      <div>
+        <h2>Let&rsquo;s work together.</h2>
+        <p>Open to brand strategist, social media manager, and content strategist roles, especially with creative teams in the Seattle area.</p>
+        <a class="btn" href="mailto:reach2writer@gmail.com">Email me</a>
+      </div>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:reach2writer@gmail.com">reach2writer@gmail.com</a></li>
+        <li>Phone: <a href="tel:+12069794410">+1 (206) 979-4410</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/aakriti-pm/">linkedin.com/in/aakriti-pm</a></li>
+        <li>R&eacute;sum&eacute;: <a href="Aakrity_Singh_Creative_Marketing_One_Pager.pdf" download>Download PDF</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site">
+    <span>&copy; <span id="yr"></span> Aakrity Singh · Bellevue, WA</span>
+    <span>Human strategy. AI-accelerated.</span>
+  </footer>
+</div>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
