@@ -103,6 +103,15 @@
   .sub h4 span{font-weight:400; font-size:14.5px}
   .sub p{font-size:15.5px; max-width:78ch}
   .sub p strong{color:var(--accent)}
+  .facts-links{list-style:none; display:grid; gap:10px; font-size:16px; font-weight:700}
+  .facts-links a{color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:3px}
+  .facts-links a:hover{color:var(--accent)}
+  .ctable{width:100%; border-collapse:collapse; margin:8px 0 4px; font-size:16px}
+  .ctable th{text-align:left; font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:var(--ink); border-bottom:4px solid var(--rule); padding:10px 14px 10px 0}
+  .ctable td{border-bottom:2px solid var(--soft); padding:14px 14px 14px 0; vertical-align:top}
+  .ctable td a{color:var(--ink); font-weight:800; text-decoration-color:var(--accent); text-underline-offset:3px}
+  .ctable td a:hover{color:var(--accent)}
+  .ctable tr.cta td{border-bottom:4px solid var(--rule); font-weight:800; color:var(--ink); padding-top:18px}
   /* contact */
   .contact-box{background:var(--ink); color:#fff; padding:52px 48px; display:grid;
     grid-template-columns:1.3fr 1fr; gap:36px; align-items:center}
@@ -125,6 +134,7 @@
     .contact-box{grid-template-columns:1fr; padding:36px 28px}
     nav.links a.hide-m{display:none}
     .sec-title h2{font-size:32px}
+    .ctable{font-size:14.5px}
   }
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
@@ -148,41 +158,41 @@
     <div>
       <div class="role">Brand Strategist | Social &amp; Content Execution</div>
       <div class="location">Bellevue, WA</div>
-      <h1>I build positioning, then <em>prove it in the feed.</em></h1>
-      <p class="punch">One strategist, three jobs, in this order. Most hires cover one. I connect all three, so the brand promise survives all the way to revenue.</p>
-      <p class="lede">Human strategy. AI-accelerated. I position B2B tech and healthcare brands, then ship the Reels, landing pages, and nurtures behind them. <strong>Results:</strong> a $250K launch, +25% engagement, 4 portfolios.</p>
+      <h1>I position B2B tech and healthcare brands, then ship the <em>Reels, landing pages, and nurtures</em> behind them.</h1>
+      <p class="punch">I connect all three, so the brand promises survive all the way to revenue.</p>
+      <p class="lede">I do the research, make the positioning calls, and ship the work myself. Latest: a trend-to-positioning project built on Google and Kaggle data.</p>
       <div class="cta-row">
         <a class="btn" href="Aakrity_Singh_Creative_Marketing_One_Pager.pdf" download>Download r&eacute;sum&eacute; (PDF)</a>
         <a class="btn ghost" href="mailto:reach2writer@gmail.com">Email me</a>
+        <a class="btn ghost" href="#contact">Book a strategy call</a>
       </div>
       <p class="contact-line">+1 (206) 979-4410 &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/aakriti-pm/">linkedin.com/in/aakriti-pm</a></p>
     </div>
     <aside class="facts">
-      <h3>At a glance</h3>
-      <dl>
-        <div><dt>Experience</dt><dd>8+ yrs marketing, content &amp; product</dd></div>
-        <div><dt>Focus</dt><dd>Brand positioning, Storytelling, Content strategy, Customer engagement, Audience segmentation</dd></div>
-        <div><dt>Results</dt><dd>6+ launches · +40% output</dd></div>
-        <div><dt>Education</dt><dd>MS, Information Management, UW</dd></div>
-        <div><dt>Base</dt><dd>Bellevue, WA · open to roles</dd></div>
-      </dl>
+      <h3>Explore</h3>
+      <ul class="facts-links">
+        <li><a href="#cases">Case studies</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="https://www.linkedin.com/in/aakriti-pm/">Recommendations</a></li>
+        <li><a href="Aakrity_Singh_Creative_Marketing_One_Pager.pdf" download>Download CV</a></li>
+      </ul>
     </aside>
   </div>
 </div>
 
-<div class="stats">
+<div class="stats" id="results">
   <div class="wrap">
-    <div class="stat"><div class="n">+40%</div><div class="t">content output via AI pipeline</div></div>
+    <div class="stat"><div class="n">+40%</div><div class="t">content output growth</div></div>
     <div class="stat"><div class="n">+15%</div><div class="t">MQL capture &amp; MRR growth</div></div>
     <div class="stat"><div class="n">−20%</div><div class="t">churn across client portfolios</div></div>
-    <div class="stat"><div class="n">6+</div><div class="t">launches across IoT, healthcare &amp; e-commerce</div></div>
+    <div class="stat"><div class="n">6+</div><div class="t">launches across IoT, healthcare &amp; SaaS</div></div>
   </div>
 </div>
 
 <div class="wrap">
   <section class="block" id="about">
     <div class="sec-title"><span class="num">01</span><h2>About</h2></div>
-    <p class="sec-sub">I write for humans, not algorithms.</p>
+    <p class="sec-sub">I write for the audience and the algorithm.</p>
     <div class="about-grid">
       <div>
         <p><strong>I&rsquo;m a Brand Strategist,</strong> and I have been around content for over 8 years. What started as passion turned into my profession, then grew into brand positioning and marketing. I use storytelling to improve customer experience.</p>
@@ -190,8 +200,7 @@
       </div>
       <div>
         <p>My clients span B2B, SaaS, and small boutique brands, all with different budgets and timelines. I work on features, enhancements, and user experiences that drive engagement and growth.</p>
-        <p><strong>My toolkit is generic. My strategy is unique.</strong></p>
-        <p class="metrics">+25% engagement · +15% MQLs · $250K launch · +40% output at 60% lower cost</p>
+        <p>Right now I&rsquo;m running an ongoing project on Google and Kaggle data, turning search and behavior trends into brand positioning.</p>
         <p>MS Information Management, University of Washington. BE Computer Science.</p>
       </div>
     </div>
@@ -199,7 +208,7 @@
 
   <section class="block" id="services">
     <div class="sec-title"><span class="num">02</span><h2>What I do</h2></div>
-    <p class="sec-sub">Brand decides, content carries, marketing grows. Here is how I run all three.</p>
+    <p class="sec-sub">One strategist, three jobs, in this order. Most hires cover one. I connect all three, so the brand promise survives all the way to revenue.</p>
     <div class="pillar">
       <div class="pnum">01</div>
       <div><h3>Step 1: Branding. Decide what the brand stands for.</h3>
@@ -218,7 +227,7 @@
       <div class="pnum">03</div>
       <div><h3>Step 3: Marketing. Take it to market and grow it.</h3>
       <p>I connect content to revenue: GTM plans, launches, funnels, MQL pipeline. Every piece of content has a job: attract, convert, or keep.</p>
-      <p><strong>What I do different:</strong> most content never touches pipeline. Mine is tracked from first click to sales handoff, so marketing spend answers to numbers. <strong>Results:</strong> $250K launch, +25% engagement, +15% MRR.</p>
+      <p><strong>What I do different:</strong> most content never touches pipeline. Mine is tracked from first click to sales handoff, so marketing spend answers to numbers. <strong>Results:</strong> $250K launch, +25% engagement.</p>
       <p class="detail"><strong>Skills:</strong> GTM, demand gen, MQL-to-SQL, funnel optimization, campaigns, A/B testing, retention, community.<br><strong>Toolkit:</strong> HubSpot, GA4, SEMrush, Tableau, Power BI, SQL, Mailchimp.</p></div>
     </div>
     <p class="process">Process: Research <span>&gt;</span> Position <span>&gt;</span> Create <span>&gt;</span> Post <span>&gt;</span> Analyze</p>
@@ -231,22 +240,6 @@
     <p class="sec-sub">Real-time case studies with real clients, delivered inside the UW program. Seattle, USA · 2024 – 2026.</p>
     <p class="subhead">Projects</p>
     <div class="sub">
-      <h4>Hugging Face <span>· Growth &amp; Engagement, Marketing + Content</span></h4>
-      <p>Redesigned developer onboarding in Figma. A/B-tested messaging, layout, and CTAs. Chose the segments and messages that fixed top-of-funnel conversion. <strong>→ +10% signups, +25% engagement.</strong></p>
-    </div>
-    <div class="sub">
-      <h4>Auvra <span>· Onboarding &amp; Retention, Content + Branding</span></h4>
-      <p>Synthesized patient feedback into high-fidelity Figma wireframes, reading what patients meant, not just what they clicked. Built an empathy-led onboarding roadmap. <strong>→ +25% retention.</strong></p>
-    </div>
-    <div class="sub">
-      <h4>Deloitte <span>· Content Strategy &amp; Analytics, Content + Marketing</span></h4>
-      <p>Built an executive dashboard from chatbot sentiment data, visualized in heat maps. Turned sentiment patterns into the content strategy for a workforce engagement tool. <strong>→ 17% faster feedback loop.</strong></p>
-    </div>
-    <div class="sub">
-      <h4>Green-AI <span>· GTM &amp; Brand Strategy, Branding + Marketing</span></h4>
-      <p>Created the GTM content strategy for a sustainable-AI initiative. Distilled cloud-optimization metrics into a product narrative, leading with numbers over slogans. Managed the full content lifecycle. <strong>→ Clear GTM story for green AI.</strong></p>
-    </div>
-    <div class="sub">
       <h4>Ongoing <span>· Google &amp; Kaggle: Trend-to-Positioning Lab</span></h4>
       <ul class="blist">
         <li><strong>Branding:</strong> Reading GA4 behavior data for growing audiences and shifting interests: download curves, login activity, rising-topic trends like Muse. Writing the positioning hypotheses: who to serve, what to promise.</li>
@@ -255,132 +248,38 @@
       </ul>
       <p><strong>→ A repeatable loop, refreshed as new data lands: spot the trend, sharpen the positioning, aim content and timing at it.</strong></p>
     </div>
-    <p class="how" style="margin-top:14px"><strong>Human edge:</strong> AI ran the numbers. I chose the segments, read the people behind the data, and set the strategy.</p>
+    <div class="sub">
+      <h4>Deloitte <span>· Content Strategy &amp; Analytics, Content + Marketing</span></h4>
+      <p>Built an executive dashboard from chatbot sentiment data, visualized in heat maps. Turned sentiment patterns into the content strategy for a workforce engagement tool. <strong>→ 17% faster feedback loop.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Hugging Face <span>· Growth &amp; Engagement, Marketing + Content</span></h4>
+      <p>Redesigned developer onboarding in Figma. A/B-tested messaging, layout, and CTAs. Chose the segments and messages that fixed top-of-funnel conversion. <strong>→ +10% signups, +25% engagement.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Auvra <span>· Onboarding &amp; Retention, Content + Branding</span></h4>
+      <p>Synthesized patient feedback into high-fidelity Figma wireframes, reading what patients meant, not just what they clicked. Built an empathy-led onboarding roadmap. <strong>→ +25% retention.</strong></p>
+    </div>
+    <div class="sub">
+      <h4>Green-AI <span>· GTM &amp; Brand Strategy, Branding + Marketing</span></h4>
+      <p>Created the GTM content strategy for a sustainable-AI initiative. Distilled cloud-optimization metrics into a product narrative, leading with numbers over slogans. Managed the full content lifecycle. <strong>→ Clear GTM story for green AI.</strong></p>
+    </div>
+    <p class="how" style="margin-top:14px"><strong>Human edge:</strong> I ran the numbers, chose the segments, read the people behind the data, and set the strategy.</p>
     <div class="skills" style="margin-top:16px"><span>Figma</span><span>A/B testing</span><span>Messaging</span><span>Segmentation</span><span>Content strategy</span><span>Analytics</span><span>GTM</span><span>Demand Generation</span></div>
   </section>
 
   <section class="block" id="cases">
     <div class="sec-title"><span class="num">04</span><h2>Client Cases</h2></div>
-    <p class="sec-sub">Five engagements across tech, healthcare, and community.</p>
-    <p class="case-index"><a href="#case-ssd">01 SSD</a> · <a href="#case-hpe">02 HPE</a> · <a href="#case-tcs">03 TCS</a> · <a href="#case-gocoding">04 Go Coding</a> · <a href="#case-radiant">05 Radiant</a></p>
-
-    <article class="case" id="case-ssd">
-      <div class="case-head"><span class="cnum">01</span><h3>Seattle Software Developers</h3><span class="tag">GTM &amp; Content Strategist · Seattle, USA · Feb 2023 – Jun 2024</span></div>
-      <p class="how"><strong>Showcase:</strong> Custom software studio running 4 US client portfolios with no shared marketing.</p>
-      <p class="problem"><strong>Problem:</strong> Each account marketed on its own. Pages didn't convert, and content demand beat supply.</p>
-      <p class="how"><strong>Why I was onboarded:</strong> Founders needed one person to own GTM and content across all 4 portfolios.</p>
-      <p class="subhead">What I did</p>
-      <ul class="blist">
-        <li>Created GTM for a pricing engine: value prop, personas, segmentation, messaging.</li>
-        <li>Ran content roadmaps across 4 portfolios on SEMrush and GA4 data.</li>
-        <li>Grew MQL capture 15% with funnels, 12+ optimized pages, and sales battle cards.</li>
-        <li>Built an AI pipeline (ChatGPT, Claude, Canva AI, CapCut): 7 assets per brief.</li>
-        <li>Managed launch readiness for 3 releases: press, onboarding, tracked nurtures, decks.</li>
-      </ul>
-      <p class="how"><strong>How, in order:</strong></p>
-      <ol class="steps">
-        <li>Started with data: SQL and GA4 showed no shared plan, weak pages, and demand beating supply.</li>
-        <li>Set positioning first: who it is for, what it promises, how it sells.</li>
-        <li>Got founders, engineers, and clinicians to agree on the tough trade-offs.</li>
-        <li>Rebuilt the pages in Figma and WordPress, and set one shared calendar.</li>
-        <li>Launched 3 releases with tracked emails and sales backup.</li>
-        <li>Built an AI pipeline to hold the pace: 7 finished pieces per brief.</li>
-      </ol>
-      <p class="impact">Impact: <strong>+25% engagement, −20% churn, $250K first-cycle revenue, +15% MQLs, +40% output at 60% lower cost.</strong></p>
-      <p class="how"><strong>Human edge:</strong> AI drafted the assets. I made the positioning bets, settled stakeholder trade-offs, and owned the launches.</p>
-      <p class="subhead">Client work</p>
-      <div class="sub">
-        <h4>SafeLot, AutoTech SaaS <span>· Brand Strategy</span></h4>
-        <ul class="blist">
-          <li>Market entry reframing IoT tech as a dealership profit platform.</li>
-          <li>Messaging framework with persona variants for owners and fleet managers.</li>
-          <li>&ldquo;Safety &amp; Efficiency&rdquo; identity via press and trust content.</li>
-          <li>Designed acquisition pages in Figma; tightened funnels with fast deployment.</li>
-        </ul>
-      </div>
-      <div class="sub">
-        <h4>Grace MindCare <span>· Strategy</span></h4>
-        <ul class="blist">
-          <li>Positioning and acquisition for 3 lines, each mapped to a patient persona.</li>
-          <li>Rewrote clinical copy into friendly language across all touchpoints.</li>
-          <li>60+ FAQs, guides, and press narratives with a 15-member care team.</li>
-        </ul>
-      </div>
-      <div class="sub">
-        <h4>Safety &amp; Women-Focused Initiatives <span>· Messaging</span></h4>
-        <ul class="blist">
-          <li>Trust-first, empathy-led messaging for vulnerable users.</li>
-          <li>Early positioning and content for safety platforms.</li>
-        </ul>
-      </div>
-      <div class="skills" style="margin-top:16px"><span>GTM strategy</span><span>Brand positioning</span><span>SEMrush</span><span>GA4</span><span>Figma</span><span>WordPress</span><span>Mailchimp</span><span>AI content ops</span><span>MQL-to-SQL</span><span>Demand Generation</span><span>AI Content Refinement</span></div>
-    </article>
-
-    <article class="case" id="case-hpe">
-      <div class="case-head"><span class="cnum">02</span><h3>HPE Aruba</h3><span class="tag">Product Content &amp; Enablement · Jan – Nov 2022</span></div>
-      <p class="how"><strong>Showcase:</strong> Enterprise networking giant. Aruba Central: SaaS platform, 10,000+ global users.</p>
-      <p class="problem"><strong>Problem:</strong> 10,000+ user SaaS platform with weak onboarding completion and high ticket volume; a new analytics feature needed launch content.</p>
-      <p class="how"><strong>Why I was onboarded:</strong> Aruba needed onboarding content strong enough to carry a platform relaunch.</p>
-      <p class="subhead">What I did</p>
-      <ul class="blist">
-        <li>Led an 8-person team relaunching onboarding with JTBD research.</li>
-        <li>Launched analytics content: positioning, in-app guides, battle cards.</li>
-        <li>Redesigned IA with chatbot docs and visual guides.</li>
-        <li>Lifted completion 17%; promoted in 6 months with GEM recognition.</li>
-      </ul>
-      <p class="how"><strong>How:</strong> Started from 800 monthly support tickets: mapped them to JTBD jobs, then rebuilt onboarding around jobs instead of features. Shipped alongside engineers, week by week.</p>
-      <p class="impact">Impact: <strong>+15% MRR, +17% completion, 20% less onboarding friction, $50K+ new MRR in 90 days, tickets down 23% (800 to 620 a month), +15% trial-to-paid.</strong></p>
-      <div class="skills"><span>JTBD</span><span>Onboarding design</span><span>Enablement content</span><span>Competitive positioning</span><span>SaaS growth</span></div>
-    </article>
-
-    <article class="case" id="case-tcs">
-      <div class="case-head"><span class="cnum">03</span><h3>TCS / SAP</h3><span class="tag">Product Analyst, Enterprise Content · 2017 – 2021</span></div>
-      <p class="how"><strong>Showcase:</strong> Global IT services. Enterprise SAP rollouts for worldwide accounts.</p>
-      <p class="problem"><strong>Problem:</strong> Slow enterprise onboarding, no standardized content, heavy support load across global SAP accounts.</p>
-      <p class="how"><strong>Why I was onboarded:</strong> SAP rollouts needed enablement content, and nobody owned it.</p>
-      <p class="subhead">What I did</p>
-      <ul class="blist">
-        <li>Launched a chatbot + 200-article knowledge base for onboarding.</li>
-        <li>Managed content across 5+ deployments: curricula, guides, playbooks.</li>
-        <li>Ran enablement programs breaking SAP into role-based journeys.</li>
-        <li>Built the content system: taxonomies, templates, style guides. Mentored juniors; earned GEM awards.</li>
-      </ul>
-      <p class="how"><strong>How:</strong> Inherited 5 accounts with no shared system. Built taxonomies, templates, and guides one account at a time, and trained juniors to keep the standard after I left.</p>
-      <p class="impact">Impact: <strong>−30% support volume, faster time-to-value, higher adoption, multiple GEM awards.</strong></p>
-      <div class="skills"><span>Content systems</span><span>Chatbot design</span><span>Knowledge management</span><span>Stakeholder communication</span></div>
-    </article>
-
-    <article class="case" id="case-gocoding">
-      <div class="case-head"><span class="cnum">04</span><h3>Go Coding</h3><span class="tag">Brand &amp; Community Marketing</span></div>
-      <p class="how"><strong>Showcase:</strong> Free, open-source coding platform fighting for student attention.</p>
-      <p class="problem"><strong>Problem:</strong> Hard to get busy young coders to notice a new website and actually use it, with zero budget for paid ads.</p>
-      <p class="how"><strong>Why I was onboarded:</strong> Zero ad budget, empty classrooms: they needed users without spending.</p>
-      <p class="subhead">What I did</p>
-      <ul class="blist">
-        <li>Focused the branding on the best part: open-source and 100% free.</li>
-        <li>Skipped online ads; went out into the community instead.</li>
-        <li>Hosted live, interactive bootcamps and workshops showing students how the platform worked.</li>
-      </ul>
-      <p class="how"><strong>How:</strong> Skipped ads entirely. Went to where students already gathered, ran live bootcamps, and let them try the platform on the spot.</p>
-      <p class="impact">Impact: <strong>Live events turned hundreds of students into active users right away, building a loyal community entirely through word-of-mouth.</strong></p>
-      <div class="skills"><span>Brand positioning</span><span>Community marketing</span><span>Grassroots growth</span><span>Event hosting</span><span>Workshop facilitation</span><span>Developer relations</span><span>Word-of-mouth growth</span></div>
-    </article>
-
-    <article class="case" id="case-radiant">
-      <div class="case-head"><span class="cnum">05</span><h3>Radiant Software</h3><span class="tag">Website Content &amp; Information Architect</span></div>
-      <p class="how"><strong>Showcase:</strong> Software services firm with a website nobody could navigate.</p>
-      <p class="problem"><strong>Problem:</strong> Potential clients couldn't find service information.</p>
-      <p class="how"><strong>Why I was onboarded:</strong> Leadership needed the site rebuilt so it could start selling services.</p>
-      <p class="subhead">What I did</p>
-      <ul class="blist">
-        <li>Rebuilt site structure and content from scratch.</li>
-        <li>Organized services into clear categories.</li>
-        <li>Rewrote copy in a professional, plain voice.</li>
-      </ul>
-      <p class="how"><strong>How:</strong> Audited the site as a first-time visitor and mapped every dead end. Then rebuilt the structure around the services clients actually ask about, in words they use.</p>
-      <p class="impact">Impact: <strong>A smoother visitor experience. A clear, modern hub for the company&rsquo;s services.</strong></p>
-      <div class="skills"><span>Brand positioning</span><span>Content strategy</span><span>Customer engagement</span><span>UX writing</span><span>Information architecture</span><span>Copywriting</span></div>
-    </article>
+    <p class="sec-sub">Five engagements across tech, healthcare, and community. Impact first, detail one click away.</p>
+    <table class="ctable">
+      <tr><th>Company</th><th>Impact</th><th>Approach</th></tr>
+      <tr><td><a href="case-ssd.html">Seattle Software Developers</a></td><td>$250K first-cycle revenue</td><td>One shared GTM engine across 4 portfolios.</td></tr>
+      <tr><td><a href="case-hpe.html">HPE Aruba</a></td><td>$50K+ new MRR in 90 days</td><td>JTBD-led onboarding relaunch.</td></tr>
+      <tr><td><a href="case-tcs.html">TCS / SAP</a></td><td>−30% support volume</td><td>Self-serve content system.</td></tr>
+      <tr><td><a href="case-gocoding.html">Go Coding</a></td><td>Hundreds of active student users</td><td>Free-education brand plus live bootcamps.</td></tr>
+      <tr><td><a href="case-radiant.html">Radiant Software</a></td><td>A clear, modern service hub</td><td>Full rebuild around client questions.</td></tr>
+      <tr class="cta"><td colspan="3">Want to know more? <a href="#contact">Book a strategy call.</a></td></tr>
+    </table>
   </section>
 
   <section class="block" id="contact" style="border-bottom:none">
@@ -401,7 +300,7 @@
 
   <footer class="site">
     <span>&copy; <span id="yr"></span> Aakrity Singh · Bellevue, WA</span>
-    <span>Human strategy. AI-accelerated.<img class="updated-badge" src="updated.svg" alt="Last updated Sep 30, 2026" width="176" height="26"></span>
+    <span>Human strategy. Real results.<img class="updated-badge" src="updated.svg" alt="Last updated Sep 30, 2026" width="176" height="26"></span>
   </footer>
 </div>
 <script>
