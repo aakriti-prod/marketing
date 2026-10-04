@@ -110,12 +110,23 @@
   .facts-links{list-style:none; display:grid; gap:10px; font-size:16px; font-weight:700}
   .facts-links a{color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:3px}
   .facts-links a:hover{color:var(--accent)}
-  .ctable{width:100%; border-collapse:collapse; margin:8px 0 4px; font-size:16px}
-  .ctable th{text-align:left; font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:var(--ink); border-bottom:4px solid var(--rule); padding:10px 14px 10px 0}
-  .ctable td{border-bottom:2px solid var(--soft); padding:14px 14px 14px 0; vertical-align:top}
-  .ctable td a{color:var(--ink); font-weight:800; text-decoration-color:var(--accent); text-underline-offset:3px}
-  .ctable td a:hover{color:var(--accent)}
-  .ctable tr.cta td{border-bottom:4px solid var(--rule); font-weight:800; color:var(--ink); padding-top:18px}
+  .kicker{font-size:12.5px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--body); margin-bottom:14px}
+  .avail{display:flex; align-items:center; gap:10px; margin-top:16px; font-size:14px; font-weight:700; color:var(--ink)}
+  .avail i{width:10px; height:10px; border-radius:50%; background:var(--accent); font-style:normal}
+  .windex{border-top:4px solid var(--rule)}
+  .wrow{display:grid; grid-template-columns:64px 1fr auto 40px; gap:20px; align-items:center; padding:22px 0; border-bottom:2px solid var(--soft); text-decoration:none; color:var(--body)}
+  .wrow:hover .wtitle{color:var(--accent)}
+  .wrow:hover .warrow{transform:translateX(5px)}
+  .wnum{font-family:var(--display); font-style:italic; font-size:22px; font-weight:600; color:var(--accent)}
+  .wmain{display:grid; gap:2px}
+  .wtitle{font-family:var(--display); font-size:27px; font-weight:600; letter-spacing:-.01em; color:var(--ink)}
+  .wapp{font-size:15px}
+  .wmetric{border:2px solid var(--ink); padding:4px 12px; font-size:13.5px; font-weight:700; color:var(--ink); white-space:nowrap}
+  .warrow{font-size:24px; font-weight:800; color:var(--accent); transition:transform .15s ease}
+  .wcta{font-size:19px; font-weight:800; color:var(--ink); padding:20px 0 4px}
+  .wcta a{color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:3px}
+  .wcta a:hover{color:var(--accent)}
+  .bigmail{display:block; margin-top:22px; font-family:var(--display); font-size:30px; font-weight:600; color:#fff; text-decoration-color:var(--accent); text-underline-offset:6px}
   /* contact */
   .contact-box{background:var(--ink); color:#fff; padding:52px 48px; display:grid;
     grid-template-columns:1.3fr 1fr; gap:36px; align-items:center}
@@ -140,7 +151,10 @@
     .contact-box{grid-template-columns:1fr; padding:36px 28px}
     nav.links a.hide-m{display:none}
     .sec-title h2{font-size:32px}
-    .ctable{font-size:14.5px}
+    .wrow{grid-template-columns:40px 1fr 24px}
+    .wmetric{grid-column:2; justify-self:start}
+    .wtitle{font-size:23px}
+    .bigmail{font-size:22px}
   }
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
@@ -162,6 +176,7 @@
 <div class="wrap" id="top">
   <div class="hero">
     <div>
+      <p class="kicker">Marketing Portfolio · Vol. 2026 · Bellevue, WA</p>
       <svg class="brand-mark" width="148" height="80" viewBox="0 0 148 80" role="img" aria-label="Three interlocking rings: brand, content, revenue">
         <circle cx="34" cy="30" r="22" fill="none" stroke="#385c3e" stroke-width="7"/>
         <circle cx="74" cy="30" r="22" fill="none" stroke="#4c7a52" stroke-width="7"/>
@@ -181,6 +196,7 @@
       </div>
       <p class="contact-line">+1 (206) 979-4410 &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/aakriti-pm/">linkedin.com/in/aakriti-pm</a></p>
       <p class="brands">Work with: Google · Deloitte · Hugging Face · HPE Aruba · TCS</p>
+      <p class="avail"><i></i>Open to full-time roles · Seattle area</p>
     </div>
     <aside class="facts">
       <h3>Explore</h3>
@@ -283,16 +299,40 @@
 
   <section class="block" id="cases">
     <div class="sec-title"><span class="num">04</span><h2>Proof, not promises</h2></div>
-    <p class="sec-sub">Five engagements across tech, healthcare, and community. Impact first, detail one click away.</p>
-    <table class="ctable">
-      <tr><th>Company</th><th>Impact</th><th>Approach</th></tr>
-      <tr><td><a href="case-ssd.html">Seattle Software Developers</a></td><td>$250K first-cycle revenue</td><td>One shared GTM engine across 4 portfolios.</td></tr>
-      <tr><td><a href="case-hpe.html">HPE Aruba</a></td><td>$50K+ new MRR in 90 days</td><td>JTBD-led onboarding relaunch.</td></tr>
-      <tr><td><a href="case-tcs.html">TCS / SAP</a></td><td>−30% support volume</td><td>Self-serve content system.</td></tr>
-      <tr><td><a href="case-gocoding.html">Go Coding</a></td><td>Hundreds of active student users</td><td>Free-education brand plus live bootcamps.</td></tr>
-      <tr><td><a href="case-radiant.html">Radiant Software</a></td><td>A clear, modern service hub</td><td>Full rebuild around client questions.</td></tr>
-      <tr class="cta"><td colspan="3">Want to know more? <a href="#contact">Book a strategy call.</a></td></tr>
-    </table>
+    <p class="sec-sub">Selected work across tech, healthcare, and community.</p>
+    <div class="windex">
+      <a class="wrow" href="case-ssd.html">
+        <span class="wnum">01</span>
+        <span class="wmain"><span class="wtitle">Seattle Software Developers</span><span class="wapp">One shared GTM engine across 4 portfolios.</span></span>
+        <span class="wmetric">$250K first-cycle revenue</span>
+        <span class="warrow">&rarr;</span>
+      </a>
+      <a class="wrow" href="case-hpe.html">
+        <span class="wnum">02</span>
+        <span class="wmain"><span class="wtitle">HPE Aruba</span><span class="wapp">JTBD-led onboarding relaunch.</span></span>
+        <span class="wmetric">$50K+ new MRR in 90 days</span>
+        <span class="warrow">&rarr;</span>
+      </a>
+      <a class="wrow" href="case-tcs.html">
+        <span class="wnum">03</span>
+        <span class="wmain"><span class="wtitle">TCS / SAP</span><span class="wapp">Self-serve content system.</span></span>
+        <span class="wmetric">−30% support volume</span>
+        <span class="warrow">&rarr;</span>
+      </a>
+      <a class="wrow" href="case-gocoding.html">
+        <span class="wnum">04</span>
+        <span class="wmain"><span class="wtitle">Go Coding</span><span class="wapp">Free-education brand plus live bootcamps.</span></span>
+        <span class="wmetric">Hundreds of active student users</span>
+        <span class="warrow">&rarr;</span>
+      </a>
+      <a class="wrow" href="case-radiant.html">
+        <span class="wnum">05</span>
+        <span class="wmain"><span class="wtitle">Radiant Software</span><span class="wapp">Full rebuild around client questions.</span></span>
+        <span class="wmetric">A clear, modern service hub</span>
+        <span class="warrow">&rarr;</span>
+      </a>
+      <p class="wcta">Want to know more? <a href="#contact">Book a strategy call.</a></p>
+    </div>
   </section>
 
   <section class="block" id="contact" style="border-bottom:none">
@@ -301,6 +341,7 @@
         <h2>Your turn.</h2>
         <p>Open to brand strategist, social media manager, and content strategist roles, especially with creative teams in the Seattle area.</p>
         <a class="btn" href="mailto:reach2writer@gmail.com">Email me</a>
+        <a class="bigmail" href="mailto:reach2writer@gmail.com">reach2writer@gmail.com</a>
       </div>
       <ul class="contact-list">
         <li>Email: <a href="mailto:reach2writer@gmail.com">reach2writer@gmail.com</a></li>
