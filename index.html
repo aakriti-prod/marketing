@@ -11,7 +11,7 @@
 <style>
   :root{
     --ink:#262b24; --body:#3c423b; --paper:#ffffff; --band:#edf2eb;
-    --accent:#4c7a52; --accent-dark:#385c3e; --rule:#262b24; --soft:#dbe4da;
+    --accent:#4c7a52; --accent-dark:#385c3e; --deep:#2f4a35; --mist:#a9c4ad; --rule:#262b24; --soft:#dbe4da;
     --display:"Fraunces",Georgia,"Times New Roman",serif;
   }
   *{box-sizing:border-box; margin:0; padding:0}
@@ -38,29 +38,31 @@
   .hero .location{font-size:14px; font-weight:600; color:var(--body); margin-top:6px}
   .hero h1{font-family:var(--display); font-size:56px; line-height:1.06; font-weight:600; letter-spacing:-.01em; color:var(--ink); margin:14px 0 20px}
   .hero h1 em{font-style:italic; font-weight:600; color:var(--accent)}
-  .punch{font-size:21px; font-weight:700; color:var(--ink); margin-bottom:16px; max-width:34ch}
+  .punch{font-family:var(--display); font-style:italic; font-size:24px; font-weight:500; color:var(--ink); margin-bottom:16px; max-width:34ch}
   .lede{font-size:18px; max-width:56ch; margin-bottom:28px}
   .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px}
   .contact-line{font-size:15px}
   .contact-line a{color:var(--accent); text-decoration:none; font-weight:600}
-  .facts{background:var(--band); padding:26px 26px 20px}
+  .facts{background:var(--band); padding:26px 26px 20px; border:2px solid var(--ink); box-shadow:10px 10px 0 var(--accent)}
   .facts h3{font-size:13px; text-transform:uppercase; letter-spacing:.14em; margin-bottom:14px; color:var(--ink)}
   .facts dl{display:grid; gap:12px; font-size:15px}
   .facts dt{font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:var(--body)}
   .facts dd{font-weight:800; color:var(--ink)}
   /* stats */
-  .stats{background:var(--accent); color:#fff; scroll-margin-top:70px}
+  .stats{background:var(--deep); color:#fff; scroll-margin-top:70px; border-top:4px solid var(--rule); border-bottom:4px solid var(--rule)}
   .stats .wrap{display:grid; grid-template-columns:repeat(4,1fr)}
   .stat{padding:30px 22px}
   .stat + .stat{border-left:2px solid rgba(255,255,255,.4)}
-  .stat .n{font-family:var(--display); font-size:46px; font-weight:600; letter-spacing:-.02em; line-height:1}
+  .stat .n{font-family:var(--display); font-style:italic; font-size:50px; font-weight:500; letter-spacing:-.02em; line-height:1}
   .stat .t{font-size:14px; margin-top:8px; color:#fff}
   /* sections */
   section.block{padding:68px 0; border-bottom:4px solid var(--rule); scroll-margin-top:70px}
   .sec-title{display:flex; align-items:baseline; gap:18px; margin-bottom:12px}
   .sec-title .num{font-family:var(--display); font-style:italic; font-size:20px; font-weight:600; color:var(--accent)}
-  .sec-title h2{font-family:var(--display); font-size:44px; font-weight:600; letter-spacing:-.01em; color:var(--ink)}
+  .sec-title h2{font-family:var(--display); font-size:54px; font-weight:600; letter-spacing:-.01em; color:var(--ink)}
+  .sec-title h2 em{font-style:italic; font-weight:500; color:var(--accent)}
   .sec-sub{font-size:18px; max-width:62ch; margin-bottom:36px}
+  .sprig{display:block; margin-bottom:18px; color:var(--accent)}
   /* about */
   .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px}
   .about-grid p{margin-bottom:16px; max-width:52ch}
@@ -114,15 +116,16 @@
   .avail{display:flex; align-items:center; gap:10px; margin-top:16px; font-size:14px; font-weight:700; color:var(--ink)}
   .avail i{width:10px; height:10px; border-radius:50%; background:var(--accent); font-style:normal}
   .windex{border-top:4px solid var(--rule)}
-  .wrow{display:grid; grid-template-columns:64px 1fr auto 40px; gap:20px; align-items:center; padding:22px 0; border-bottom:2px solid var(--soft); text-decoration:none; color:var(--body)}
+  .wrow{display:grid; grid-template-columns:64px 1fr auto auto; gap:20px; align-items:center; padding:22px 20px; border-bottom:2px solid var(--soft); text-decoration:none; color:var(--body)}
+  .wrow:hover{background:var(--band)}
   .wrow:hover .wtitle{color:var(--accent)}
-  .wrow:hover .warrow{transform:translateX(5px)}
   .wnum{font-family:var(--display); font-style:italic; font-size:22px; font-weight:600; color:var(--accent)}
   .wmain{display:grid; gap:2px}
   .wtitle{font-family:var(--display); font-size:27px; font-weight:600; letter-spacing:-.01em; color:var(--ink)}
   .wapp{font-size:15px}
   .wmetric{border:2px solid var(--ink); padding:4px 12px; font-size:13.5px; font-weight:700; color:var(--ink); white-space:nowrap}
-  .warrow{font-size:24px; font-weight:800; color:var(--accent); transition:transform .15s ease}
+  .wpill{font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; border:2px solid var(--ink); color:var(--ink); padding:9px 16px; white-space:nowrap}
+  .wrow:hover .wpill{background:var(--accent); border-color:var(--accent); color:#fff}
   .wcta{font-size:19px; font-weight:800; color:var(--ink); padding:20px 0 4px}
   .wcta a{color:var(--ink); text-decoration-color:var(--accent); text-underline-offset:3px}
   .wcta a:hover{color:var(--accent)}
@@ -130,7 +133,10 @@
   /* contact */
   .contact-box{background:var(--ink); color:#fff; padding:52px 48px; display:grid;
     grid-template-columns:1.3fr 1fr; gap:36px; align-items:center}
-  .contact-box h2{font-family:var(--display); font-size:40px; font-weight:600; letter-spacing:-.01em; margin-bottom:12px}
+  .contact-box h2{font-family:var(--display); font-size:52px; font-weight:600; letter-spacing:-.01em; margin-bottom:12px}
+  .contact-box h2 em{font-style:italic; font-weight:500; color:var(--mist)}
+  .contact-box .sprig{color:var(--mist)}
+  .contact-list a:hover{color:var(--mist)}
   .contact-box p{color:#ccd8cc; margin-bottom:24px; max-width:44ch}
   .contact-box .btn{background:var(--accent)}
   .contact-list{list-style:none; display:grid; gap:12px; font-size:16px}
@@ -150,9 +156,11 @@
     .pillar{grid-template-columns:1fr; gap:8px}
     .contact-box{grid-template-columns:1fr; padding:36px 28px}
     nav.links a.hide-m{display:none}
-    .sec-title h2{font-size:32px}
-    .wrow{grid-template-columns:40px 1fr 24px}
+    .sec-title h2{font-size:36px}
+    .contact-box h2{font-size:38px}
+    .wrow{grid-template-columns:40px 1fr}
     .wmetric{grid-column:2; justify-self:start}
+    .wpill{grid-column:2; justify-self:start}
     .wtitle{font-size:23px}
     .bigmail{font-size:22px}
   }
@@ -189,7 +197,7 @@
       <div class="location">Bellevue, WA</div>
       <h1>I position B2B tech and healthcare brands, then ship the <em>newsletters, media announcements, landing pages, and nurtures</em> behind them.</h1>
       <p class="punch">I do the research, make the positioning calls, and ship the work myself.</p>
-      <p class="lede">I connect all three, so the brand promises survive all the way to revenue. Latest: a Google-sponsored Kaggle project turning Muse adoption data into brand positioning.</p>
+      <p class="lede">I connect all three, so the <strong>brand promises survive all the way to revenue</strong>. Latest: a Google-sponsored Kaggle project turning Muse adoption data into brand positioning.</p>
       <div class="cta-row">
         <a class="btn ghost" href="mailto:reach2writer@gmail.com">Email me</a>
         <a class="btn" href="#contact">Book a strategy call</a>
@@ -220,23 +228,23 @@
 
 <div class="wrap">
   <section class="block" id="about">
-    <div class="sec-title"><span class="num">01</span><h2>The human behind the work</h2></div>
+    <div class="sec-title"><span class="num">01</span><h2>The human behind the <em>work</em></h2></div>
     <p class="sec-sub">I write for the audience and the algorithm.</p>
     <div class="about-grid">
       <div>
-        <p><strong>I&rsquo;m a Brand Strategist,</strong> and I have been around content for over 8 years. What started as passion turned into my profession, then grew into brand positioning and marketing. I use storytelling to improve customer experience.</p>
+        <p><strong>I&rsquo;m a Brand Strategist,</strong> and I have been around content for over 8 years. What started as passion turned into my profession, then grew into brand positioning and marketing. I use <strong>storytelling</strong> to improve customer experience.</p>
         <p>I thrive on client feedback, and I handle trade-offs and enhancements whenever needed.</p>
       </div>
       <div>
         <p>My clients span B2B, SaaS, and small boutique brands, all with different budgets and timelines. I work on features, enhancements, and user experiences that drive engagement and growth.</p>
-        <p>Right now I&rsquo;m analyzing Muse adoption trends with Kaggle datasets and GA4 in an open Kaggle project sponsored by Google, turning trend data into brand positioning.</p>
+        <p>Right now I&rsquo;m analyzing Muse adoption trends with Kaggle datasets and GA4 in an open Kaggle project sponsored by Google, turning trend data into <strong>brand positioning</strong>.</p>
         <p>MS Information Management, University of Washington. BE Computer Science.</p>
       </div>
     </div>
   </section>
 
   <section class="block" id="services">
-    <div class="sec-title"><span class="num">02</span><h2>All three, in order</h2></div>
+    <div class="sec-title"><span class="num">02</span><h2>All three, <em>in order</em></h2></div>
     <p class="sec-sub">One strategist, three jobs, in this order. Most hires cover one. I connect all three, so the brand promise survives all the way to revenue.</p>
     <div class="pillar">
       <div class="pnum">01</div>
@@ -298,38 +306,39 @@
   </section>
 
   <section class="block" id="cases">
-    <div class="sec-title"><span class="num">04</span><h2>Proof, not promises</h2></div>
+    <svg class="sprig" width="120" height="24" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 14h112" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="32" cy="8" rx="10" ry="4" fill="currentColor" transform="rotate(-24 32 8)"/><ellipse cx="60" cy="8" rx="10" ry="4" fill="currentColor" opacity=".55" transform="rotate(-24 60 8)"/><ellipse cx="88" cy="8" rx="10" ry="4" fill="currentColor" transform="rotate(-24 88 8)"/></svg>
+    <div class="sec-title"><span class="num">04</span><h2>Proof, <em>not</em> promises</h2></div>
     <p class="sec-sub">Selected work across tech, healthcare, and community.</p>
     <div class="windex">
       <a class="wrow" href="case-ssd.html">
         <span class="wnum">01</span>
         <span class="wmain"><span class="wtitle">Seattle Software Developers</span><span class="wapp">One shared GTM engine across 4 portfolios.</span></span>
         <span class="wmetric">$250K first-cycle revenue</span>
-        <span class="warrow">&rarr;</span>
+        <span class="wpill">View case &rarr;</span>
       </a>
       <a class="wrow" href="case-hpe.html">
         <span class="wnum">02</span>
         <span class="wmain"><span class="wtitle">HPE Aruba</span><span class="wapp">JTBD-led onboarding relaunch.</span></span>
         <span class="wmetric">$50K+ new MRR in 90 days</span>
-        <span class="warrow">&rarr;</span>
+        <span class="wpill">View case &rarr;</span>
       </a>
       <a class="wrow" href="case-tcs.html">
         <span class="wnum">03</span>
         <span class="wmain"><span class="wtitle">TCS / SAP</span><span class="wapp">Self-serve content system.</span></span>
         <span class="wmetric">−30% support volume</span>
-        <span class="warrow">&rarr;</span>
+        <span class="wpill">View case &rarr;</span>
       </a>
       <a class="wrow" href="case-gocoding.html">
         <span class="wnum">04</span>
         <span class="wmain"><span class="wtitle">Go Coding</span><span class="wapp">Free-education brand plus live bootcamps.</span></span>
         <span class="wmetric">Hundreds of active student users</span>
-        <span class="warrow">&rarr;</span>
+        <span class="wpill">View case &rarr;</span>
       </a>
       <a class="wrow" href="case-radiant.html">
         <span class="wnum">05</span>
         <span class="wmain"><span class="wtitle">Radiant Software</span><span class="wapp">Full rebuild around client questions.</span></span>
         <span class="wmetric">A clear, modern service hub</span>
-        <span class="warrow">&rarr;</span>
+        <span class="wpill">View case &rarr;</span>
       </a>
       <p class="wcta">Want to know more? <a href="#contact">Book a strategy call.</a></p>
     </div>
@@ -338,7 +347,8 @@
   <section class="block" id="contact" style="border-bottom:none">
     <div class="contact-box">
       <div>
-        <h2>Your turn.</h2>
+        <svg class="sprig" width="120" height="24" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 14h112" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="32" cy="8" rx="10" ry="4" fill="currentColor" transform="rotate(-24 32 8)"/><ellipse cx="60" cy="8" rx="10" ry="4" fill="currentColor" opacity=".55" transform="rotate(-24 60 8)"/><ellipse cx="88" cy="8" rx="10" ry="4" fill="currentColor" transform="rotate(-24 88 8)"/></svg>
+        <h2>Your <em>turn.</em></h2>
         <p>Open to brand strategist, social media manager, and content strategist roles, especially with creative teams in the Seattle area.</p>
         <a class="btn" href="mailto:reach2writer@gmail.com">Email me</a>
         <a class="bigmail" href="mailto:reach2writer@gmail.com">reach2writer@gmail.com</a>
